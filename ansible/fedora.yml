@@ -23,6 +23,7 @@
     - mongodb-org
     - openssl
     - openssl-devel
+    - packer
     - postgresql
     - readline-devel
     - ruby

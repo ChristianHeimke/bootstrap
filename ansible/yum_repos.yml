@@ -25,6 +25,18 @@
             repo_gpgcheck: yes
             state: present
 
+        # TIP: Now that you have added the HashiCorp repository, you can install Terraform, Vault, Consul, and Nomad
+        # with the same command. https://learn.hashicorp.com/tutorials/packer/get-started-install-cli
+        - name: Install Hashicorp yum_repository
+          yum_repository:
+            name: hashicorp
+            baseurl: https://rpm.releases.hashicorp.com/fedora/$releasever/$basearch/stable
+            description: Hashicorp Stable - $basearch
+            enabled: yes
+            gpgcheck: yes
+            gpgkey: https://rpm.releases.hashicorp.com/gpg
+            repo_gpgcheck: yes
+            state: present
 
         - name: Install Yarn yum_repository
           yum_repository:
