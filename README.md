@@ -32,7 +32,7 @@ RESTART AFTER RUNNING THE ABOVE. After restarting, verify in the `Software and U
 
 Follow the steps in the [Ansible directory](ansible/README.md).
 
-## Usage
+## MacOS Usage
 
 > **Always review a script before running it!** See the [Info](#info) section below and review the source code in [bootstrap.sh](/bootstrap.sh)
 
