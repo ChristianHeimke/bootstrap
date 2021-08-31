@@ -6,6 +6,10 @@ Bootstrap your laptop into a lean, mean, software-shipping dev machine.
 
 ## Requirements
 
+This supports [MacOS](#macos) or [Fedora Linux](#fedora-linux).
+
+### MacOS
+
 * macOS
 
   Ideally make sure macOS is up to date (this could take a while)
@@ -24,7 +28,11 @@ RESTART AFTER RUNNING THE ABOVE. After restarting, verify in the `Software and U
   The bootstrap script assumes you use bash or zsh and adds required configuration to `~/.bash_profile` and `~/.zshrc` respectively.
   If using another shell, e.g. ksh, you'll need to accommodate that yourself.
 
-## Usage
+### Fedora Linux
+
+Follow the steps in the [Ansible directory](ansible/README.md).
+
+## MacOS Usage
 
 > **Always review a script before running it!** See the [Info](#info) section below and review the source code in [bootstrap.sh](/bootstrap.sh)
 
