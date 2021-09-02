@@ -86,8 +86,11 @@ brew_bundle() {
 }
 
 launch_docker() {
-  log "⚠️  Launching Docker"
-  open /Applications/Docker.app
+  # skip on circleci
+  if [ -z "${CIRCLECI:-""}" ]; then
+    log "⚠️  Launching Docker"
+    open /Applications/Docker.app
+  fi
 }
 
 install_ruby() {

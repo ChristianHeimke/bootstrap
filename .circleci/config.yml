@@ -10,12 +10,17 @@ jobs:
           command: "shellcheck bootstrap.sh"
   run:
     macos:
-      xcode: "12.1"
+      xcode: "12.5.1"
     steps:
       - checkout
       - run:
           name: "Run bootstrap.sh"
-          command: "./bootstrap.sh | tee -a bootstrap.log"
+          command: |
+            # CircleCI's Mac executor comes pre-installed with this `six` python package
+            # which conflicts with the bootstrap... uninstall first
+            pip3 uninstall --yes six
+            # run bootstrap
+            ./bootstrap.sh | tee -a bootstrap.log
       - store_artifacts:
           path: ./bootstrap.log
       - store_artifacts:
