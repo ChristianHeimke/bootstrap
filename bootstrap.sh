@@ -187,6 +187,8 @@ k8s_completion() {
   # Zsh (default shell as of MacOS Catalina)
   append_to_dotfile zshrc 'autoload -Uz compinit'
   append_to_dotfile zshrc 'compinit'
+  append_to_dotfile zshrc 'autoload bashcompinit'
+  append_to_dotfile zshrc 'bashcompinit'
   append_to_dotfile zshrc 'source <(kubectl completion zsh)'
 
   # Both
